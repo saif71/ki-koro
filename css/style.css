@@ -272,3 +272,6 @@ img{
 div#text {
   line-height: 30px;
 }
+p>a{
+  color: #3f4142;
+}
