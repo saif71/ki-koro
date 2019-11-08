@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ki Koro - কি করো - Answer Machine Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='./node_modules/bootstrap/dist/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+
+  
+
+<body>
+  <div id="spinner" style="display: none">
+      <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+  </div>
+  <div id="quote-box" class="d-none">
+    <blockquote>
+      <div ></div>
+      <div id="author"></div>
+    </blockquote>
+  </div>
+  
+    
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 chat_screen">
+        
+      <div id="ask" class="ask mb-3 animated fadeInUp">
+        <div class="thumbnail_ask">
+          <img class="rounded-circle" src="./img/ask.png" alt="">
+        </div>
+        <div class="ask_content">কি করো 😊?</div>
+      </div>
+      <div class="ans mt-3 animated fadeInUp">
+        <div class="thumbnail_ans">
+          <img class="rounded-circle" src="./img/ans.png" alt="">
+        </div>
+        
+        <div class="ans_content" id="text">Typing...</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="action-panel mb-4 ">
+        <p id="new-ans">নতুন উত্তর 👀</p>
+        <p class="copy-button" data-clipboard-action="copy" data-clipboard-target="#text">কপি করুন 📃</p>
+        
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center">
+  <h2>Ki Koro - কি করো - Answer Machine</h2>
+</div>
+
+  <footer class="col-sm-12">
+    <div>
+    <p style="font-size: 15px; margin-top: 10px;">Presented by <a href="https://saif71.com">Saif71</a></p>
+    </div>
+  </footer>
+
+</body>
+  <script src='./node_modules/jquery/dist/jquery.min.js'></script>
+  <script src="./node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+  <script  src="js/index.js"></script>
+  <script  src="js/clipboard.min.js"></script>
+  <script>
+  var clipboard = new ClipboardJS('.copy-button');
+  clipboard.on('success', function(e) {
+    Swal.fire(
+  'কপি করা হয়েছে 🎉!',
+  'এখন যারে মন চায় সেন্ড করতে পারেন !😎',
+  'success'
+)
+});
+  </script>
+
+</html>

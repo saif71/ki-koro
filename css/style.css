@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css?family=Hind|Niramit');
+
+/* #quote-box {
+  margin: 1% 20% 2% 20%;
+  background-color: blue;
+} */
+
+body{
+  color: white;
+  background-color: #f2f2f2;
+  font-family: 'Hind', sans-serif;
+}
+/*   background-color:4caf50; */
+
+p {
+  font-size: 20px;
+}
+
+h2 {
+  color: #007bff;
+  margin-top: 20px;
+  font-size: 24px;
+}
+h2:hover {
+  cursor: pointer;
+}
+#author {
+  text-align: right;
+  font-size: 20px;
+  font-style: italic;
+}
+footer{
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  color: black;
+}
+
+@keyframes slideup{
+  0%{
+    transform: translate(0, 0);
+  }
+  50%{
+    transform: translate(0, -15px);
+  }
+}
+
+@keyframes slideright{
+  0%{
+    transform: translate(0, 0);
+  }
+  50%{
+    transform: translate(15px, 0);
+  }
+}
+.row{
+  /* height: 100px; */
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  /* background-color: blue; */
+  margin-top: 12px;
+}
+
+.cssnewquote{
+  width: 50%;
+  text-align: center;
+  color: #ffa323;
+}
+
+.moveup:hover{
+  /* transform: translate(0, -5px); */
+  animation-name: slideup;
+  animation-duration: .3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.moveright:hover{
+  animation-name: slideright;
+  animation-duration: .3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+img{
+  width: 40px;
+}
+#quote-box{
+  max-width: 600px;
+  min-height: 100px;
+  margin: 40px auto auto auto;
+  /* border: solid 3px #fff; */
+  border-bottom: solid 3px #fff;
+  border-top: solid 3px #fff;
+  padding: 20px;
+}
+.x{
+  font-size: 50px;
+  font-family: 'Niramit', sans-serif;
+  position: relative;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+/* Loading annimation */
+#spinner{
+  position: fixed;
+  top: 0%;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background: #ffffffc7;
+  text-align: center;
+}
+
+.lds-roller {
+  display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+    top: 250px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 32px 32px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #007bff;
+  margin: -3px 0 0 -3px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 50px;
+  left: 50px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 54px;
+  left: 45px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 57px;
+  left: 39px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 58px;
+  left: 32px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 57px;
+  left: 25px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 54px;
+  left: 19px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 50px;
+  left: 14px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 45px;
+  left: 10px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* End loading annimation */
+
+
+.ask {
+  display: flex;
+  margin-top: 390px;
+}
+.ans {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.ask_content, .ans_content {
+  background: #0084ff;
+  padding: 10px 20px 10px 20px;
+  border-radius: 25px;
+  margin: 0px 10px 0px 10px;
+  text-align: left;
+}
+.thumbnail_ans {
+  margin:5px;
+}
+.chat_screen {
+  background-size: contain;
+    height: 671px;
+    /* max-width: 447px; */
+    background-color: white;
+    background-image: url(../img/bg_bottom.png), url(../img/bg_top.png);
+    background-position: center bottom, left top;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: 0px 17px 20px -10px #cecece;
+
+}
+#new-ans {
+  cursor: pointer;
+  width: 120px;
+  background-color: transparent;
+  border: 1px solid #007bff;
+  color: #007bff;
+  font-size: 15px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 25px;
+  margin: auto;
+}
+.action-panel{
+  /* position: fixed; */
+  display: flex;
+  z-index: 99;
+  
+}
+.copy-button {
+  cursor: pointer;
+  width: 115px;
+  background-color: transparent;
+  border: 1px solid #007bff;
+  color: #007bff;
+  font-size: 15px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 25px;
+  margin: auto;
+}
+.copy-button:focus {
+  border: none;
+  outline: none;
+}
+div#text {
+  line-height: 30px;
+}
