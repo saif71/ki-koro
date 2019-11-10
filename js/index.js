@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var maxRdmCel = 64;
+    var maxRdmCel = 65;
     //Loading a random quote together with the page on first load
     // function to find random number
     function getRandomInt(max) {
@@ -384,10 +384,14 @@ $(document).ready(function() {
       author: "মোঃ দ্বীন ইসলাম বাপ্পি",
       quote:
          "বলবো না আমার লজ্জা লাগে।।।।"
-    }
+    },
     //08 nov
     
-
+    65: {
+      author: "Zahid Hasan",
+      quote:
+         "কিছু না করলেও ব্যস্ত আছি"
+    }
 
 
 
